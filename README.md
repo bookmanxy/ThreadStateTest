@@ -31,8 +31,10 @@
 * 示例文件：ThreadTest5.java
 * 结果 状态从 RUNNABLE 进入 TIMED_WAITING
 
-##### **6：当发生I/O阻塞的时候 是什么状态？**
+##### **6：当发生I/O的时候 是什么状态？**
 * 示例文件：ThreadTest6.java
 * 结果 状态还是RUNNABLE
 
-
+##### **7：当发生I/O的时候 当前占有的锁会不会释放？**
+* 示例文件：ThreadTest7.java
+* 结果 当线程发生i/o时并不会释放锁

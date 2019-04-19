@@ -1,11 +1,8 @@
 import java.util.Scanner;
 
 /**
+ * 采用Scanner scan = new Scanner(System.in); 来模拟i/o
  *
- *  wait()后，线程会释放掉它所占有的“锁标志”，从而使线程所在对象中的其他shnchronized数据可被别的线程使用。
- *  wait()h和notify()因为会对对象的“锁标志”进行操作，所以他们必需在Synchronized函数或者 synchronized block 中进行调用。如果在non-synchronized 函数或 non-synchronized
- *  block 中进行调用，虽然能编译通过，但在运行时会发生IllegalMonitorStateException的异常。
- *  参考：https://www.e-learn.cn/content/qita/2023261
  */
 public class ThreadTest6 {
     public static void main(String[] args) throws Exception{

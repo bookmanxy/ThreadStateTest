@@ -1,5 +1,11 @@
 /**
+ * 设计思想：
  *
+ * 1：t线程 被wait
+ * 2：主线程循环5次打印 t线程 的状态
+ * 3：t2线程 调用object.nodify() 唤醒 t线程，并打印状态
+ *
+ * 资料：
  *  wait()后，线程会释放掉它所占有的“锁标志”，从而使线程所在对象中的其他shnchronized数据可被别的线程使用。
  *  wait()h和notify()因为会对对象的“锁标志”进行操作，所以他们必需在Synchronized函数或者 synchronized block 中进行调用。如果在non-synchronized 函数或 non-synchronized
  *  block 中进行调用，虽然能编译通过，但在运行时会发生IllegalMonitorStateException的异常。
