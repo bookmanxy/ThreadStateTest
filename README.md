@@ -36,5 +36,13 @@
 * 结果 状态还是RUNNABLE
 
 ##### **7：当发生I/O的时候 当前占有的锁会不会释放？**
-* 示例文件：ThreadTest7.java
+* 示例文件：ThreadTest7.java、ThreadTest8.java
 * 结果 当线程发生i/o时并不会释放锁
+
+##### **8：synchronized释放锁的时机**
+* 示例文件：ThreadTest9.java、ThreadTest10.java、ThreadTest11.java
+* 结果 1：代码运行完，2：同步代码break，return等；3：同步代码error、Exception等；4：线程被wait 以上四种会释放监视器锁；
+
+##### **9：调用 Thread.yield() 是什么状态？会释放锁吗**
+* 示例文件：ThreadTest12.java
+* 示例结果：依然是RUNNABL，很奇怪的逻辑，yield()后让给别人，但锁依然占着不让，那就可能会死锁。
